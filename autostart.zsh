@@ -3,7 +3,10 @@
 
 thunderbird &;
 firefox &;
-xfce4-terminal --title='vifm' --execute 'vifm /usr/local/www/sites' &;
+xfce4-terminal \
+    --title='vifm' \
+    --command='vifm' \
+    --working-directory='/usr/local/www/sites' &;
 
 sleep 50;
 
