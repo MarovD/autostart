@@ -3,9 +3,9 @@
 
 thunderbird &;
 firefox &;
-xfce4-terminal --title='vifm' --execute 'vifm' &;
+xfce4-terminal --title='vifm' --execute 'vifm /usr/local/www/sites' &;
 
-sleep 30;
+sleep 50;
 
 wmctrl -r 'vifm' -t 0
 wmctrl -r 'vifm' -b toggle,maximized_horz,maximized_vert;
