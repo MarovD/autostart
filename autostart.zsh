@@ -1,9 +1,9 @@
 #!/usr/local/bin/zsh
 
-if [ -f '~/.ssh/git_rsa' ];
-then
-    ssh-add ~/.ssh/git_rsa;
-fi;
+# if [ -f '~/.ssh/git_rsa' ];
+# then
+#     ssh-add ~/.ssh/git_rsa;
+# fi;
 
 if [ ! -d '/media/disk' ];
 then
