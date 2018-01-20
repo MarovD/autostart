@@ -1,10 +1,5 @@
 #!/usr/local/bin/zsh
 
-# if [ -f '~/.ssh/git_rsa' ];
-# then
-#     ssh-add ~/.ssh/git_rsa;
-# fi;
-
 if [ ! -d '/media/disk' ];
 then
     mkdir '/media/disk';
@@ -17,12 +12,19 @@ fi;
 
 firefox &;
 thunderbird &;
-${0:a:h}/../scripts/file-manager.zsh;
+${0:a:h}/../scripts/file-manager.zsh &;
+${0:a:h}/../scripts/audio-player.zsh &;
 
-sleep 40;
+mixer vol 70;
 
-wmctrl -r 'thunderbird' -t 0;
+sleep 60;
+
+wmctrl -r 'thunderbird' -t 3;
 wmctrl -r 'firefox' -t 0;
 wmctrl -r 'vifm' -t 1;
+wmctrl -r 'cmus' -t 2;
+
+cmus-remote -v 60;
+cmus-remote -p;
 # wmctrl -r 'vifm' -b toggle,maximized_horz,maximized_vert;
 wmctrl -s 1;
