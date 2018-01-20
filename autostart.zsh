@@ -15,16 +15,19 @@ thunderbird &;
 ${0:a:h}/../scripts/file-manager.zsh &;
 ${0:a:h}/../scripts/audio-player.zsh &;
 
-mixer vol 70;
-
 sleep 60;
 
-wmctrl -r 'thunderbird' -t 3;
 wmctrl -r 'firefox' -t 0;
 wmctrl -r 'vifm' -t 1;
 wmctrl -r 'cmus' -t 2;
+wmctrl -r 'thunderbird' -t 3;
 
 cmus-remote -v 60;
-cmus-remote -p;
 # wmctrl -r 'vifm' -b toggle,maximized_horz,maximized_vert;
-wmctrl -s 1;
+wmctrl -s 0;
+
+mixer vol 70;
+mixer pcm 100;
+
+cmus-remote -p;
+
