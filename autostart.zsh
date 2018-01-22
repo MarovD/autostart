@@ -8,13 +8,13 @@ xfce4-terminal \
     --command='vifm' \
     --working-directory='/usr/local/www/sites' &;
 
-sleep 50;
+sleep 60;
+
+wmctrl -r 'thunderbird' -t 2;
+wmctrl -r 'firefox' -t 1;
 
 wmctrl -r 'vifm' -t 0
 wmctrl -r 'vifm' -b toggle,maximized_horz,maximized_vert;
-
-wmctrl -r 'thunderbird' -t 1;
-wmctrl -r 'firefox' -t 1;
 
 wmctrl -s 0;
 
