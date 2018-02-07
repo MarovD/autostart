@@ -17,14 +17,14 @@ ${0:a:h}/../scripts/audio-player.zsh &;
 
 sleep 60;
 
-wmctrl -r 'firefox' -t 0;
-wmctrl -r 'vifm' -t 1;
+wmctrl -r 'firefox' -t 4;
+wmctrl -r 'vifm' -t 0;
 wmctrl -r 'cmus' -t 2;
 wmctrl -r 'thunderbird' -t 3;
 
 cmus-remote -v 60;
 # wmctrl -r 'vifm' -b toggle,maximized_horz,maximized_vert;
-wmctrl -s 0;
+wmctrl -s 4;
 
 mixer vol 70;
 mixer pcm 100;
