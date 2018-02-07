@@ -6,8 +6,8 @@ ${0:a:h}/../scripts/file-manager.zsh &;
 
 sleep 60;
 
-wmctrl -r 'thunderbird' -t 1;
-wmctrl -r 'firefox' -t 1;
+wmctrl -r 'thunderbird' -t 3;
+wmctrl -r 'firefox' -t 4;
 wmctrl -r 'vifm' -t 0
 
-wmctrl -s 0;
+wmctrl -s 4;
