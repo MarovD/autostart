@@ -10,6 +10,7 @@ then
     mount -t ext2fs '/dev/da0p1' '/media/disk'
 fi;
 
+wmctrl -s 0;
 firefox &;
 thunderbird &;
 ${0:a:h}/../scripts/file-manager.zsh &;
@@ -19,11 +20,10 @@ sleep 60;
 
 wmctrl -r 'firefox' -t 4;
 wmctrl -r 'vifm' -t 0;
-wmctrl -r 'cmus' -t 2;
+wmctrl -r 'cmus' -t 5;
 wmctrl -r 'thunderbird' -t 3;
 
 cmus-remote -v 60;
-# wmctrl -r 'vifm' -b toggle,maximized_horz,maximized_vert;
 wmctrl -s 4;
 
 mixer vol 70;
