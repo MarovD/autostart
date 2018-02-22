@@ -10,7 +10,6 @@ then
     mount -t ext2fs '/dev/da0p1' '/media/disk'
 fi;
 
-wmctrl -s 0;
 firefox &;
 thunderbird &;
 ${0:a:h}/../scripts/file-manager.zsh &;
@@ -18,13 +17,13 @@ ${0:a:h}/../scripts/audio-player.zsh &;
 
 sleep 60;
 
-wmctrl -r 'firefox' -t 4;
-wmctrl -r 'vifm' -t 0;
-wmctrl -r 'cmus' -t 5;
-wmctrl -r 'thunderbird' -t 3;
+wmctrl -r 'firefox' -t 5;
+wmctrl -r 'vifm' -t 1;
+wmctrl -r 'cmus' -t 6;
+wmctrl -r 'thunderbird' -t 2;
+wmctrl -s 5;
 
 cmus-remote -v 60;
-wmctrl -s 4;
 
 mixer vol 70;
 mixer pcm 100;
